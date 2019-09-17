@@ -48,3 +48,13 @@ hidl_package_root {
     name:"vendor.qti.hardware.debugutils",
     path:"vendor/qcom/opensource/interfaces/debugutils"
 }
+
+hidl_package_root {
+    name: "com.qualcomm.qti",
+    path: "vendor/qcom/opensource/interfaces",
+}
+
+hidl_package_root {
+    name: "vendor.qti.hardware",
+    path: "vendor/qcom/opensource/interfaces",
+}
