@@ -36,15 +36,33 @@ package vendor.qti.hardware.display.mapperextensions@1.3;
 
 import android.hardware.graphics.mapper@4.0::types;
 import android.hardware.graphics.mapper@4.0;
-import vendor.qti.hardware.display.mapperextensions@1.2::IQtiMapperExtensions;
-import vendor.qti.hardware.display.mapperextensions@1.0::Error;
+import @1.2::IQtiMapperExtensions;
+import @1.0::Error;
 
 interface IQtiMapperExtensions extends @1.2::IQtiMapperExtensions {
 
     /*
-     * Fast path for get metadata.
+     * Get fd of metadata buffer.
      */
     @callflow(next="*")
-    getMetaDataValue(pointer src, MetadataType metadataType, pointer in) generates (@1.0::Error error);
+    getMetadataFd(pointer buffer) generates (@1.0::Error error, int32_t fd);
 
+    /*
+     * Get size of metadata buffer.
+     */
+    @callflow(next="*")
+    getMetadataSize(pointer buffer) generates (@1.0::Error error, uint64_t size);
+
+    /*
+     * Get offset of CRC buffer.
+     */
+    @callflow(next="*")
+    getCRCBufferOffset(pointer buffer) generates (@1.0::Error error, uint64_t offset);
+
+    /*
+     * Get CRC buffer data.
+     * Pass a valid pointer to CRC buffer data.
+     */
+    @callflow(next="*")
+    getCRCBufferData(pointer buffer, pointer data) generates (@1.0::Error error);
 };
