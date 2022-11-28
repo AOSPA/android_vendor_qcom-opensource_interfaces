@@ -18,6 +18,23 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c8e880_f6c6141b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-28T04:32:44Z",
+      "side": 1,
+      "message": "we do not have the kalama display Hal yet.  compile fails if we simply add the R definitions here rather than replacing because the T functions are not implemented in any existing HAL.  once kalama source is released, we should be able to do this properly.",
+      "revId": "8dcbcebaf232bd222fe863a84022cd177c7a55e9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9d14d8a2_9f323daa",
